@@ -1,0 +1,44 @@
+.bottom-section{
+    display: flex;
+    flex-direction: column;
+    height:inherit;
+    background-color: cadetblue;
+}
+
+.price-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around ;
+    height: 3rem;
+    background-color: rgb(162, 214, 231);
+}
+.extra-addings{
+    background-color: chocolate;
+}
+.salad-option, .tomato-option, .cheese-option, .meat-option {
+    display: flex;
+    padding: 0.6rem;
+    justify-content: space-between;
+    background-color:rgb(204, 159, 61);
+    color: white;
+    align-content: center;
+  align-items: center;
+}
+
+.order-option{
+    padding: 1rem;
+}
+
+.order-button{
+    height: 2.5rem;
+    justify-content: center;
+    align-items: center;
+}
+.remove-button, .add-button {
+    margin: 0 0.5rem;
+    height: 2.5rem;
+}
+.remove-button:hover, .add-button:hover {
+   background-color: white;
+   border-color: white;
+}
