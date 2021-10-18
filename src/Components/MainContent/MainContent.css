@@ -3,7 +3,7 @@
     background-color: rgb(243, 243, 243);
     justify-content: center;
     /* align-content: center ; */
-    height: 35rem;
+    height: 44rem;
 }
 
 .burger{
@@ -13,6 +13,10 @@
     /* justify-content: center; */
     margin-top: 3rem;
     align-items: center;
+    transition: margin-top 1s;
+}
+.burger:hover{
+    margin-top: 4.5rem;
 }
 .burger-top{
     background-image: linear-gradient(#E28743, rgb(207, 117, 32));

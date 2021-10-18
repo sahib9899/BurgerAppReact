@@ -19,41 +19,48 @@ function BottomSection(props) {
     return (
         <>
         <div className='bottom-section'>
-            <div className='price-section'>
-                <h3>Total Price : ₹{price}.00 </h3>
-            </div>
+            
             <div className='extra-addings'>
                 <div className='salad-option'>
                     <h3>Salad</h3>
                     <div>
-                        <button className='remove-button' onClick={()=> props.decrement('salad')} > Remove </button>
-                        <button className='add-button' onClick={()=>props.increment('salad')}> Add</button>
+                        <Button variant='danger' className='remove-button' onClick={()=> props.decrement('salad')} > &nbsp;-&nbsp; </Button>
+                        <label><h4>{salad}</h4></label>
+                        <Button variant='success' className='add-button' onClick={()=>props.increment('salad')}> &nbsp;+&nbsp;</Button>
                     </div>
                 </div>
                 
                 <div className='tomato-option'>
                     <h3>Tomato</h3>
                     <div>
-                        <button className='remove-button' onClick={()=> props.decrement('tomato')}> Remove </button>
-                        <button className='add-button' onClick={()=> props.increment('tomato')} > Add</button>
+                        <Button variant='danger' className='remove-button' onClick={()=> props.decrement('tomato')}> &nbsp;-&nbsp; </Button>
+                        <label><h4>{tomato}</h4></label>
+                        <Button variant='success' className='add-button' onClick={()=> props.increment('tomato')} > &nbsp;+&nbsp;</Button>
                     </div> 
                 </div>
                 <div className='cheese-option'>
                     <h3>Cheese</h3>
                     <div>
-                        <button className='remove-button' onClick={()=> props.decrement('cheese')}> Remove </button>
-                        <button className='add-button' onClick={()=> props.increment('cheese')}> Add</button>
+                        <Button variant='danger' className='remove-button' onClick={()=> props.decrement('cheese')}> &nbsp;-&nbsp; </Button>
+                        <label><h4>{cheese}</h4></label>
+                        <Button variant='success' className='add-button' onClick={()=> props.increment('cheese')}> &nbsp;+&nbsp;</Button>
                         </div>
                 </div>
                 <div className='meat-option'>
                 <h3>Meat</h3>
                     <div>
-                        <button className='remove-button' onClick={()=> props.decrement('meat')}> Remove </button>
-                        <button className='add-button' onClick={()=> props.increment('meat')}> Add</button>
+                        <Button variant='danger' className='remove-button' onClick={()=> props.decrement('meat')}> &nbsp;-&nbsp; </Button>
+                        <label><h4>{meat}</h4></label>
+                        <Button variant='success' className='add-button' onClick={()=> props.increment('meat')}> &nbsp;+&nbsp;  </Button>
                     </div>
                 </div>
+                <div className='price-section'>
+                      <h4>Total Price : ₹{price}.00 </h4>
+                    <p>Your order includes a Large size burger with following addings,<br />
+                    Salad {salad}, Tomato {tomato}, Cheese {cheese} and Meat {meat} </p>
+                 </div>
                 <div className='order-option'>
-                    <button onClick={()=>setShow(true)} className='order-button' >Order Now</button>
+                    <Button variant='warning' onClick={()=>setShow(true)} className='order-button' >Order Now</Button>
                 </div>
             </div>
 

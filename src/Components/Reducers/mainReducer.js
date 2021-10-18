@@ -21,13 +21,13 @@ export const mainReducer = (state=InitialState, action) => {
                 return {...state, meat: state.meat + 1 };
 
         case 'DECREMENT' :
-            if(action.payload === 'salad')
+            if(action.payload === 'salad' && state.salad >= 1)
                 return {...state, salad: state.salad - 1 };
-            else if(action.payload === 'tomato')
+            else if(action.payload === 'tomato' && state.tomato >= 1)
                 return {...state, tomato: state.tomato - 1 };
-            else if(action.payload === 'cheese')
+            else if(action.payload === 'cheese' && state.cheese >= 1)
                 return {...state, cheese: state.cheese - 1 };
-            else
+            else if(state.meat >= 1)
                 return {...state, meat: state.meat - 1 };
 
         default : return state;

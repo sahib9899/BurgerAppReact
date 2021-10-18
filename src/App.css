@@ -1,4 +1,6 @@
 .App {
+  display: grid;
+  grid-template-rows: 9.2% 82% 23.6%;
   text-align: center;
   margin: 0px;
 }
@@ -27,6 +29,12 @@
 
 .App-link {
   color: #61dafb;
+}
+
+
+.main-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr ;
 }
 
 @keyframes App-logo-spin {
